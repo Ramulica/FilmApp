@@ -9,9 +9,10 @@ class ObscuredTextFieldSample extends StatelessWidget {
   dynamic myController;
   dynamic cap;
   bool bigBox;
+  bool edit;
 
 
-  ObscuredTextFieldSample(this.title, this.myController, this.cap, this.bigBox);
+  ObscuredTextFieldSample(this.title, this.myController, this.cap, this.bigBox, this.edit);
 
   @override
   Widget build(BuildContext context) {
@@ -19,8 +20,10 @@ class ObscuredTextFieldSample extends StatelessWidget {
       
       padding: EdgeInsets.all(standards.pading2),
       child: SizedBox(
-        width: double.maxFinite,
+        width: double.infinity,
         child: TextField(
+          style: TextStyle(color: standards.black),
+          enabled: edit,
           inputFormatters: [
                 LengthLimitingTextInputFormatter(cap),
           ],
