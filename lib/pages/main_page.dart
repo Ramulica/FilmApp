@@ -21,6 +21,7 @@ class MainPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           actions: [
              IconButton(
             icon: const Icon(Icons.add),
