@@ -18,20 +18,16 @@ void main() async{
   WidgetsFlutterBinding.ensureInitialized();
 
   final database = openDatabase(
-    join(await getDatabasesPath(), 'films_database.db'),
+    join(await getDatabasesPath(), 'films_database_3.db'),
     onCreate: (db, version) {
 
       return db.execute(
-        'CREATE TABLE films(id INTEGER PRIMARY KEY, Title TEXT, Genre TEXT, Actors TEXT, Description TEXT, Rating  REAL, Date TEXT)',
+        'CREATE TABLE movies(id INTEGER PRIMARY KEY, Title TEXT, Genre TEXT, Actors TEXT, Description TEXT, Rating  INTAGER, Date TEXT, Views INTAGER)',
       );
     },
-    onUpgrade: (Database db, int oldVersion, int newVersion) {
-    if (oldVersion < newVersion) {
-      db.execute("ALTER TABLE films ADD COLUMN Views INTAGER;");
-    }},
-    version: 3,
+    
+    version: 1,
   );
-  print( Color.fromARGB(255, 67, 0, 105).runtimeType);
 
   globals.allFilms = await allFilms(database);
   print(globals.allFilms);

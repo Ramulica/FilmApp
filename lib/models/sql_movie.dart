@@ -55,7 +55,7 @@ class Films {
 Future<void> insertFilm(film, database) async {
     final db = await database;
     await db.insert(
-      'films',
+      'movies',
       film.toMap(),
       conflictAlgorithm: ConflictAlgorithm.replace,
     );
@@ -64,7 +64,7 @@ Future<void> insertFilm(film, database) async {
 
     final db = await database;
 
-    final List<Map<String, dynamic>> maps = await db.query('films');
+    final List<Map<String, dynamic>> maps = await db.query('movies');
 
 
     return List.generate(maps.length, (i) {
@@ -87,7 +87,7 @@ Future<void> insertFilm(film, database) async {
     print("here");
 
     await db.update(
-      'films',
+      'movies',
       film.toMap(),
 
       where: 'id = ?',
@@ -103,7 +103,7 @@ Future<void> insertFilm(film, database) async {
 
 
     await db.delete(
-      'films',
+      'movies',
 
       where: 'id = ?',
 
@@ -116,7 +116,7 @@ Future<List<Films>> searchFilmsByTitle(String title, database) async {
 
      final db = await database;
 
-    final List<Map<String, dynamic>> maps = await db.query("films", where: "Title LIKE ?", whereArgs : ['%$title%']);
+    final List<Map<String, dynamic>> maps = await db.query("movies", where: "Title LIKE ?", whereArgs : ['%$title%']);
 
     return List.generate(maps.length, (i) {
       return Films(
@@ -137,7 +137,7 @@ Future<List<Films>> searchFilmsByTitle(String title, database) async {
      final db = await database;
 
 
-    final List<Map<String, dynamic>> maps = await db.query("films", where: "Actors LIKE ?", whereArgs : ['%$actors%']);
+    final List<Map<String, dynamic>> maps = await db.query("movies", where: "Actors LIKE ?", whereArgs : ['%$actors%']);
 
 
     return List.generate(maps.length, (i) {
