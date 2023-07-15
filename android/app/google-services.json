@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "642380603224",
+    "project_id": "filmapp-32345",
+    "storage_bucket": "filmapp-32345.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642380603224:android:6b92ed030fa5e6e8a30f2d",
+        "android_client_info": {
+          "package_name": "com.example.newsapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642380603224-oq1v03fe8m814kjrgncp0mq9n2hp9os0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcCJgtu7K9mTEml7QLWpJ5k0HgX7u4O0A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "642380603224-oq1v03fe8m814kjrgncp0mq9n2hp9os0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

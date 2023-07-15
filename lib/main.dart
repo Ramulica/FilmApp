@@ -2,10 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:newsapp/pages/main_page.dart';
 import 'package:newsapp/pages/add_movie.dart';
-import 'package:newsapp/pages/edit_movie.dart';
 
 
-import 'dart:async';
 
 import 'package:flutter/widgets.dart';
 import 'package:path/path.dart';

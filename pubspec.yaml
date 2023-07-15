@@ -39,6 +39,7 @@ dependencies:
   flutter_rating_bar: ^4.0.1
   intl: ^0.18.1
   easy_search_bar: ^2.5.0
+  cloud_firestore: ^4.8.2
 
 dev_dependencies:
   flutter_test:
